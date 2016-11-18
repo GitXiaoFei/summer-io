@@ -49,11 +49,8 @@ public class ImportExcel extends ImportFile {
 		template = this.getTemplate();
 		// 下面是对中文文件名的处理
 		response.setCharacterEncoding("UTF-8");// 设置相应内容的编码格式
-		String fname = java.net.URLEncoder.encode(template.getFileName() + "-导入模版", "UTF-8");
-		response.setHeader("Content-Disposition",
-				// "attachment;filename=" + new String(fname.getBytes("UTF-8"),
-				// "GBK") + ".xls");
-				"attachment;filename=" + fname + ".xls");
+		String fname = new String((template.getFileName() + "-导入模版").getBytes(), "ISO-8859-1");
+		response.setHeader("Content-Disposition", "attachment;filename=" + fname + ".xls");
 		response.setContentType("application/msexcel");// 定义输出类型
 
 		List<Column> columns = template.getColumns();
