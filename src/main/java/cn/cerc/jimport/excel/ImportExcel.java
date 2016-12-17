@@ -41,7 +41,7 @@ public class ImportExcel extends ImportFile {
 	}
 
 	public void exportTemplate() throws IOException, WriteException {
-		DataSet dataOut = new DataSet();
+		DataSet dataOut = getDataSet();
 		this.setResponse(response);
 		OutputStream os = response.getOutputStream();// 取得输出流
 		response.reset();// 清空输出流
