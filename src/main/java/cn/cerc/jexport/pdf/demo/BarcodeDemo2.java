@@ -53,10 +53,8 @@ public class BarcodeDemo2 {
 			// BaseFont.IDENTITY_H,BaseFont.NOT_EMBEDDED);
 			fontChinese = new Font(bf, 12, Font.NORMAL);
 		} catch (DocumentException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
