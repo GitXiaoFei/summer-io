@@ -13,7 +13,6 @@ import jxl.Workbook;
 import jxl.write.WritableSheet;
 import jxl.write.WritableWorkbook;
 import jxl.write.WriteException;
-import jxl.write.biff.RowsExceededException;
 
 public class ExportExcel {
 	private static ApplicationContext app;
@@ -27,13 +26,6 @@ public class ExportExcel {
 		this.response = response;
 	}
 
-	/**
-	 * 是否有权限导出判断
-	 * @author 李港归
-	 * 2017年4月28日下午4:58:06
-	 * @throws RowsExceededException
-	 * @throws WriteException
-	 */
 	public void export() throws IOException, WriteException, AccreditException {
 		if (this.handle == null)
 			throw new RuntimeException("handle is null");
@@ -56,13 +48,6 @@ public class ExportExcel {
 		}
 	}
 
-	/**
-	 * excel导出
-	 * @author 李港归
-	 * 2017年4月28日下午4:58:06
-	 * @throws RowsExceededException
-	 * @throws WriteException
-	 */
 	private void exportDataSet() throws IOException, WriteException {
 		template = this.getTemplate();
 		OutputStream os = response.getOutputStream();// 取得输出流
@@ -88,14 +73,6 @@ public class ExportExcel {
 		os.close();
 	}
 
-	/**
-	 * 获取导出的内容
-	 * @author 李港归
-	 * 2017年4月28日下午4:58:06
-	 * @throws RowsExceededException
-	 * @throws WriteException
-	 * @param message 
-	 */
 	public void export(String message) throws WriteException, IOException {
 		this.setTemplateId("ExportMessage");
 		DataSet ds = new DataSet();
@@ -113,12 +90,6 @@ public class ExportExcel {
 		this.response = response;
 	}
 
-	/**
-	 * 获取导出权限
-	 * @return Template
-	 * @author 李港归
-	 * 2017年4月28日下午5:24:01
-	 */
 	public Template getTemplate() {
 		if (template == null) {
 			if (templateId == null)

@@ -14,12 +14,6 @@ public class OptionColumn extends Column {
 		this.items = items;
 	}
 
-	/**
-	 *取得数据
-	 *@author  李港归 
-	 *@Time  2017-4-28 16：35
-	 *@return  数据集字段对象           
-	 */
 	@Override
 	public Object getValue() {
 		String key = this.getString();

@@ -49,11 +49,6 @@ public class ExportPdf {
 		this.template = template;
 	}
 
-	/**
-	 *Pdf导入
-	 *@author  李港归 
-	 *@Time  2017-4-28 16：40
-	 */
 	public void export() throws IOException, DocumentException {
 		Template template = this.getTemplate();
 
@@ -108,12 +103,6 @@ public class ExportPdf {
 		response.flushBuffer();
 	}
 
-	/**
-	 *输出Pdf信息
-	 *@author  李港归 
-	 *@Time  2017-4-28 16：40
-	 *@param message
-	 */
 	public void export(String message) throws DocumentException, IOException {
 		response.reset();// 清空输出流
 

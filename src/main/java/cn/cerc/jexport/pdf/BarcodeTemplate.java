@@ -29,13 +29,6 @@ public class BarcodeTemplate extends Template {
 		barHeight = 24;
 	}
 
-	/**
-	 *输出商品信息
-	 *@author  李港归 
-	 *@Time  2017-4-28 16：40
-	 *@param document 文档对象
-	 *@param writer 文件输入流
-	 */
 	@Override
 	public void output(Document document, PdfWriter writer) throws DocumentException, IOException {
 		PdfContentByte cb = writer.getDirectContent();
@@ -57,14 +50,6 @@ public class BarcodeTemplate extends Template {
 		}
 	}
 
-	/**
-	 *把添加的数据显示到最后一行
-	 *@author  李港归 
-	 *@Time  2017-4-28 16：40
-	 *@param barcode
-	 *@param descspec
-	 *@return 数据集
-	 */
 	public BarcodeTemplate add(String barcode, String descspec) {
 		DataSet ds = this.getDataSet();
 		if (ds == null) {
