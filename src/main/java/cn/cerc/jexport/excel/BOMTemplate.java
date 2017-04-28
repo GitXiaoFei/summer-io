@@ -30,6 +30,12 @@ public class BOMTemplate extends Template {
 		this.heads = heads;
 	}
 
+	/**
+	 *根据列表输出表格
+	 *@author  李港归 
+	 *@Time  2017-4-28 16：40
+	 *@param sheet 工作表
+	 */
 	@Override
 	public void output(WritableSheet sheet) throws RowsExceededException, WriteException {
 		// 输出列头
