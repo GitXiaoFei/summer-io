@@ -25,6 +25,15 @@ public class DataSetFile {
 		save(this.fileName);
 	}
 
+	/**
+	 * 输出文件
+	 * @author 李港归
+	 * 2017年4月28日下午5:43:50
+	 * @throws IOException
+	 * @throws RowsExceededException
+	 * @throws WriteException
+	 * @param fileName 文件名
+	 */
 	public void save(String fileName) throws IOException, RowsExceededException, WriteException {
 		setFileName(fileName);
 		OutputStream os = new FileOutputStream(fileName);

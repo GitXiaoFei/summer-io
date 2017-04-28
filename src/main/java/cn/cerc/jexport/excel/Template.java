@@ -57,6 +57,14 @@ public class Template {
 		this.historyWriter = historyWriter;
 	}
 
+	/**
+	 * 输出数据
+	 * @author 李港归
+	 * 2017年4月28日下午4:53:06
+	 * @throws RowsExceededException
+	 * @throws WriteException
+	 * @param sheet 工作表
+	 */
 	public void output(WritableSheet sheet) throws RowsExceededException, WriteException {
 		// 输出列头
 		for (int col = 0; col < columns.size(); col++) {
@@ -79,6 +87,18 @@ public class Template {
 		}
 	}
 
+
+	/**
+	 * 写入数据
+	 * @author 李港归
+	 * 2017年4月28日下午4:53:06
+	 * @throws RowsExceededException
+	 * @throws WriteException
+	 * @param sheet 工作表
+	 * @param col 列
+	 * @param row 行
+	 * @param column 数据对象
+	 */
 	protected void writeColumn(WritableSheet sheet, int col, int row, Column column)
 			throws WriteException, RowsExceededException {
 		if (column instanceof NumberColumn) {
