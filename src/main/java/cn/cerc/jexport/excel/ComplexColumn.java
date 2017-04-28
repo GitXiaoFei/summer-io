@@ -16,6 +16,12 @@ public class ComplexColumn extends Column {
 		this.fields = fields;
 	}
 
+	/**
+	 *取得数据
+	 *@author  李港归 
+	 *@Time  2017-4-28 16：40
+	 *@return  
+	 */
 	public String getValue() {
 		Record record = this.getRecord();
 		StringBuffer buff = new StringBuffer();

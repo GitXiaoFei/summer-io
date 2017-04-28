@@ -57,6 +57,13 @@ public class ReportHeaderFooter extends PdfPageEventHelper {
 		total = writer.getDirectContent().createTemplate(50, 50);// 共 页 的矩形的长宽高
 	}
 
+	/**
+	 *分页显示表格数据
+	 *@author  李港归 
+	 *@Time  2017-4-28 16：40
+	 *@param document 文档对象
+	 *@param writer 输入流对象
+	 */
 	public void onEndPage(PdfWriter writer, Document document) {
 
 		Font f8 = null;

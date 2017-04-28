@@ -26,6 +26,13 @@ public class InvoiceTemplate extends Template {
 		this.setMarginRight(12);
 	}
 
+	/**
+	 *填充表格数据
+	 *@author  李港归 
+	 *@Time  2017-4-28 16：40
+	 *@param document 文档对象
+	 *@param writer 输入流对象
+	 */
 	@Override
 	public void output(Document document, PdfWriter writer) throws DocumentException, IOException {
 		BaseFont bfChinese = BaseFont.createFont("STSong-Light", "UniGB-UCS2-H", BaseFont.NOT_EMBEDDED);

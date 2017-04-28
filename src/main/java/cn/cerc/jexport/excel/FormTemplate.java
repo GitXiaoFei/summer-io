@@ -20,6 +20,15 @@ public class FormTemplate extends Template {
 		this.heads = heads;
 	}
 
+
+	/**
+	 * 输出数据以及设置新的起点行号
+	 * @author 李港归
+	 * 2017年4月28日下午4:53:06
+	 * @throws RowsExceededException
+	 * @throws WriteException
+	 * @param sheet 工作表
+	 */
 	@Override
 	public void output(WritableSheet sheet) throws RowsExceededException, WriteException {
 		// 输出列头
